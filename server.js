@@ -66,9 +66,20 @@ app.get("/", (req , res) => {
 app.get('/about', (req,res) => {
     res.render('about.hbs',{
         pageTitle: "About page",
-        currentYear: new Date().getFullYear()
+        
     });
 });
+
+
+app.get('/projects', (req,res) => {
+    res.render('projects.hbs',{
+        pageTitle: "Project page",
+        comeco: "Meus projetos atuais : ",
+        primeiro: "Primeiro site node js."
+        
+    });
+});
+
 
 app.get("/bad", (req,res) => {
     res.send({
